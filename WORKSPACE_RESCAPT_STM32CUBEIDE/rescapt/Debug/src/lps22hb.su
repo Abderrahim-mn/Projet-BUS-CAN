@@ -1,0 +1,4 @@
+../src/lps22hb.c:36:9:lps22hb_whoAmI	16	static
+../src/lps22hb.c:45:6:lps22hb_setup	16	static
+../src/lps22hb.c:56:5:lps22hb_getPressure	32	static
+../src/lps22hb.c:73:5:lps22hb_getTemperature	24	static

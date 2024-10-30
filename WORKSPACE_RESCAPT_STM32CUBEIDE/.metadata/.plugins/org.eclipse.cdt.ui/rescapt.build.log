@@ -1,0 +1,25 @@
+14:47:26 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -c -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc/Legacy" -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/src/vl6180x" -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/Utilities/STM32F1xx_Nucleo" -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/inc" -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/device" -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core" -I"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc" -O0 -ffunction-sections -Wall -fcommon -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
+../src/main.c: In function 'main':
+../src/main.c:48:2: warning: implicit declaration of function 'uart1_Init'; did you mean 'uart3_Init'? [-Wimplicit-function-declaration]
+   48 |  uart1_Init();
+      |  ^~~~~~~~~~
+      |  uart3_Init
+arm-none-eabi-gcc -o "rescapt.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/casa/kerhoas/Desktop/3/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/LinkerScript.ld" --specs=nosys.specs -Wl,-Map="rescapt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rescapt.elf
+ 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  47456	    388	   2820	  50664	   c5e8	rescapt.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  rescapt.elf  > "rescapt.list"
+Finished building: rescapt.list
+ 
+arm-none-eabi-objcopy  -O binary  rescapt.elf  "rescapt.bin"
+Finished building: rescapt.bin
+ 
+
+14:47:27 Build Finished. 0 errors, 1 warnings. (took 1s.269ms)
+

@@ -1,0 +1,6 @@
+/home/douae/ENIB/CRS/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1524:22:NVIC_SetPriority	16	static
+/home/douae/ENIB/CRS/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1656:26:SysTick_Config	16	static
+../src/main.c:68:5:main	96	static
+../src/main.c:279:6:accel_callback	8	static
+../src/main.c:301:6:HAL_TIM_PeriodElapsedCallback	16	static
+../src/main.c:308:6:can_callback	24	static
